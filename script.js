@@ -5,11 +5,13 @@ var sourceSwap = function () {
     $this.attr('src', newSource);
 }
 
-$about = ("I'm Andreas.  I write stuff");
+$about = ('<p></p>');
 $programming =('<div id="labs">Programming</div> ');
 $design =('<div id="labs">Design</div> ');
 $security =('<div id="labs">Security</div> ');
 $labs =('<div id="labs">Labs</div> ');
+
+
 
 $(document).ready(function () {
     $( "#title" ).animate({
@@ -29,11 +31,6 @@ $(document).ready(function () {
         });
     });
 
-
-
-
-
-
     $('li').hover(function () {
             $(this).stop().animate({
                 fontSize: '20px'
@@ -51,4 +48,7 @@ $(document).ready(function () {
     $(function () {
         $('img.hover_bar').hover(sourceSwap, sourceSwap);
     });
+    $('#service li').click(function(){
+        $('content').fadeIn('fast');
+    })
 })
